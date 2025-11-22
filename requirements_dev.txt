@@ -1,1 +1,3 @@
 ipython==9.7.0
+django-seeds==0.6.0
+pysicopg2==2.9.3

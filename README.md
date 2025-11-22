@@ -46,6 +46,9 @@ Welcome to the CoffeeShop project! This is a Django-based web application design
 
 6. Open your browser and visit `http://127.0.0.1:8000`.
 
+## Mockdata
+python manage.py seed [app] --number=10
+
 ## Contributing
 
 Contributions are welcome! Please fork the repository and submit a pull request.

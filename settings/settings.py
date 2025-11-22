@@ -29,8 +29,15 @@ ALLOWED_HOSTS = []
 
 
 # Application definition
+THIRTY_APPS = [
+    'crispy_forms',
+    'crispy_tailwind',
+    'django_seed',
+]
 OUNS_APP = [
+    'users',
     'products',
+    'orders',
 ]
 
 INSTALLED_APPS = [
@@ -40,7 +47,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-] + OUNS_APP
+] + THIRTY_APPS + OUNS_APP
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -57,7 +64,7 @@ ROOT_URLCONF = 'settings.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -123,3 +130,11 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+LOGIN_REDIRECT_URL = 'order_detail'
+LOGOUT_REDIRECT_URL = 'login'
+LOGIN_URL = 'login'
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = "tailwind"
+
+CRISPY_TEMPLATE_PACK = "tailwind"
